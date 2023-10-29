@@ -28,7 +28,11 @@ struct AddContactView: View {
           }
         }
       }
+      .onAppear() {
+          viewStore.send(.appear)
+      }
     }
+
   }
 }
 

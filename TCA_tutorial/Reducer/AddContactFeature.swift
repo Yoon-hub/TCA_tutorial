@@ -16,6 +16,8 @@ struct AddContactFeature: Reducer {
     case saveButtonTapped
     case setName(String)
     case delegate(Delegate)
+    case addWhenViewAppeat(Contact)
+    case appear
       
       enum Delegate: Equatable {
          // case cancel
@@ -38,10 +40,15 @@ struct AddContactFeature: Reducer {
           await send(.delegate(.saveContact(contact)))
           await self.dismiss()
         }
+    case .appear:
+        
+        return .send(.addWhenViewAppeat(Contact(name: "윤제")))
 
     case let .setName(name):
       state.contact.name = name
       return .none
+    default:
+        return .none
     }
   }
 }

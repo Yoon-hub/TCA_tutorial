@@ -38,6 +38,16 @@ struct ContactsView: View {
                         }
                     }
                 }
+                
+                NavigationLink {
+                    AddContactView(
+                        store: self.store.scope(state: \.addContact, action: ContactsFeature.Action.addContact)
+                    )
+                } label: {
+                    Text("Scope로 연결하기")
+                }
+
+
             }
         }
 //        .fullScreenCover(store: self.store.scope(state: \.$addContact, action: {.addContact($0)})) { store in

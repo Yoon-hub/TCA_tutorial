@@ -17,6 +17,8 @@
 		6769C3E72AEDD82D00D3CA09 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3E62AEDD82D00D3CA09 /* ContactsView.swift */; };
 		6769C3E92AEDDDD300D3CA09 /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3E82AEDDDD300D3CA09 /* AddContactFeature.swift */; };
 		6769C3EB2AEDDE0200D3CA09 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */; };
+		6769C3ED2AEE713000D3CA09 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */; };
+		6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		6769C3E62AEDD82D00D3CA09 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		6769C3E82AEDDDD300D3CA09 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 		6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
+		6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				673FAD332AED1CAF004AB046 /* CounterFeature.swift */,
 				6769C3E22AEDD6DB00D3CA09 /* ContactsFeature.swift */,
 				6769C3E82AEDDDD300D3CA09 /* AddContactFeature.swift */,
+				6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				673FAD242AED13BA004AB046 /* CounterView.swift */,
 				6769C3E62AEDD82D00D3CA09 /* ContactsView.swift */,
 				6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */,
+				6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,11 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6769C3ED2AEE713000D3CA09 /* ContactDetailFeature.swift in Sources */,
 				6769C3E32AEDD6DB00D3CA09 /* ContactsFeature.swift in Sources */,
 				6769C3E92AEDDDD300D3CA09 /* AddContactFeature.swift in Sources */,
 				673FAD342AED1CAF004AB046 /* CounterFeature.swift in Sources */,
 				673FAD252AED13BA004AB046 /* CounterView.swift in Sources */,
 				6769C3E72AEDD82D00D3CA09 /* ContactsView.swift in Sources */,
+				6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */,
 				6769C3EB2AEDDE0200D3CA09 /* AddContactView.swift in Sources */,
 				673FAD232AED13BA004AB046 /* TCA_tutorialApp.swift in Sources */,
 			);

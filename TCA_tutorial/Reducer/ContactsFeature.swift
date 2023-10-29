@@ -20,6 +20,8 @@ struct ContactsFeature: Reducer {
 //        @PresentationState var alert: AlertState<Action.Alert>? // chater3 수정
         @PresentationState var destination: Destination.State?
         var contacts: IdentifiedArrayOf<Contact> = []
+        var path = StackState<ContactDetailFeature.State>()
+        var addContact = AddContactFeature.State(contact: Contact(name: ""))
     }
     
     enum Action: Equatable {
@@ -28,6 +30,7 @@ struct ContactsFeature: Reducer {
         case deleteButtonTapped(id: Contact.ID)
         //case alert(PresentationAction<Alert>)
         case destination(PresentationAction<Destination.Action>)
+        case addContact(AddContactFeature.Action)
         
         enum Alert: Equatable {
             case confirmDeletion(id: Contact.ID)
@@ -35,6 +38,11 @@ struct ContactsFeature: Reducer {
     }
     
     var body: some ReducerOf<Self> {
+        
+        Scope(state: \.addContact, action: /Action.addContact) {
+            AddContactFeature()
+        }
+        
         Reduce { state, action in
             switch action {
             case .addButtonTapped:
@@ -86,6 +94,12 @@ struct ContactsFeature: Reducer {
                     }
                   }
                 )
+                return .none
+            
+            case .addContact(.addWhenViewAppeat(let contact)):
+                state.contacts.append(contact)
+                return .none
+            default:
                 return .none
             }
         }
