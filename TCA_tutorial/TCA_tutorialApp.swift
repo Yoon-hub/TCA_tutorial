@@ -11,7 +11,13 @@ import ComposableArchitecture
 @main
 struct TCA_tutorialApp: App {
     
-    let store = Store(initialState: ContactsFeature.State()) {
+    let store = Store(initialState: ContactsFeature.State(
+        contacts: [
+            Contact(name: "Blob"),
+            Contact(name: "Blob Jr."),
+            Contact(name: "Blob Sr."),
+        ]
+    )) {
         ContactsFeature()
     }
     
