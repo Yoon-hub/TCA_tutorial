@@ -19,6 +19,10 @@
 		6769C3EB2AEDDE0200D3CA09 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */; };
 		6769C3ED2AEE713000D3CA09 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */; };
 		6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */; };
+		F4DB07DD2AEF20F50086F91C /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = F4DB07DC2AEF20F50086F91C /* TCACoordinators */; };
+		F4DB07DF2AEF21050086F91C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07DE2AEF21050086F91C /* Screen.swift */; };
+		F4DB07E12AEF24EA0086F91C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07E02AEF24EA0086F91C /* Coordinator.swift */; };
+		F4DB07E32AEF43C60086F91C /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07E22AEF43C60086F91C /* CoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,9 @@
 		6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
 		6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		F4DB07DE2AEF21050086F91C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		F4DB07E02AEF24EA0086F91C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F4DB07E22AEF43C60086F91C /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DB07DD2AEF20F50086F91C /* TCACoordinators in Frameworks */,
 				673FAD322AED1441004AB046 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +75,7 @@
 		673FAD212AED13BA004AB046 /* TCA_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F4DB07DA2AEF20D00086F91C /* Coordinator */,
 				6769C3E42AEDD80E00D3CA09 /* View */,
 				6769C3E12AEDD6C900D3CA09 /* Reducer */,
 				673FAD222AED13BA004AB046 /* TCA_tutorialApp.swift */,
@@ -106,6 +115,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F4DB07DA2AEF20D00086F91C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F4DB07DE2AEF21050086F91C /* Screen.swift */,
+				F4DB07E02AEF24EA0086F91C /* Coordinator.swift */,
+				F4DB07E22AEF43C60086F91C /* CoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +143,7 @@
 			name = TCA_tutorial;
 			packageProductDependencies = (
 				673FAD312AED1441004AB046 /* ComposableArchitecture */,
+				F4DB07DC2AEF20F50086F91C /* TCACoordinators */,
 			);
 			productName = TCA_tutorial;
 			productReference = 673FAD1F2AED13BA004AB046 /* TCA_tutorial.app */;
@@ -155,6 +175,7 @@
 			mainGroup = 673FAD162AED13BA004AB046;
 			packageReferences = (
 				673FAD302AED1441004AB046 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				F4DB07DB2AEF20F50086F91C /* XCRemoteSwiftPackageReference "TCACoordinators" */,
 			);
 			productRefGroup = 673FAD202AED13BA004AB046 /* Products */;
 			projectDirPath = "";
@@ -187,6 +208,9 @@
 				6769C3E92AEDDDD300D3CA09 /* AddContactFeature.swift in Sources */,
 				673FAD342AED1CAF004AB046 /* CounterFeature.swift in Sources */,
 				673FAD252AED13BA004AB046 /* CounterView.swift in Sources */,
+				F4DB07DF2AEF21050086F91C /* Screen.swift in Sources */,
+				F4DB07E12AEF24EA0086F91C /* Coordinator.swift in Sources */,
+				F4DB07E32AEF43C60086F91C /* CoordinatorView.swift in Sources */,
 				6769C3E72AEDD82D00D3CA09 /* ContactsView.swift in Sources */,
 				6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */,
 				6769C3EB2AEDDE0200D3CA09 /* AddContactView.swift in Sources */,
@@ -401,6 +425,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		F4DB07DB2AEF20F50086F91C /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -408,6 +440,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 673FAD302AED1441004AB046 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		F4DB07DC2AEF20F50086F91C /* TCACoordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4DB07DB2AEF20F50086F91C /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -31,6 +31,8 @@ struct ContactsFeature: Reducer {
         //case alert(PresentationAction<Alert>)
         case destination(PresentationAction<Destination.Action>)
         case addContact(AddContactFeature.Action)
+        case tapDetail(Contact)
+        case detail(Contact)
         
         enum Alert: Equatable {
             case confirmDeletion(id: Contact.ID)
@@ -99,6 +101,10 @@ struct ContactsFeature: Reducer {
             case .addContact(.addWhenViewAppeat(let contact)):
                 state.contacts.append(contact)
                 return .none
+            
+            case .tapDetail(let contact):
+                return .send(.detail(contact))
+                
             default:
                 return .none
             }

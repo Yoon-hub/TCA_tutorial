@@ -23,7 +23,11 @@ struct TCA_tutorialApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContactsView(store: store)
+            CoordinatorView (
+                store: Store(initialState: .initialState, reducer: {
+                    Coordinator()
+                })
+            )
         }
     }
 }

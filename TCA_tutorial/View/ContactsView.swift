@@ -19,12 +19,21 @@ struct ContactsView: View {
                         HStack {
                           Text(contact.name)
                           Spacer()
-                          Button {
-                            viewStore.send(.deleteButtonTapped(id: contact.id))
-                          } label: {
-                            Image(systemName: "trash")
-                              .foregroundColor(.red)
-                          }
+//                          Button {
+//                            viewStore.send(.deleteButtonTapped(id: contact.id))
+//                          } label: {
+//                            Image(systemName: "trash")
+//                              .foregroundColor(.red)
+//                          }
+                          
+                            Button {
+                                print("Tap")
+                                viewStore.send(.tapDetail(contact))
+                            } label: {
+                              Text("디테일")
+                                .foregroundColor(.red)
+                            }
+                            
                         }
                     }
                 }
