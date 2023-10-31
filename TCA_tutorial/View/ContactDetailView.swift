@@ -15,9 +15,24 @@ struct ContactDetailView: View {
     var body: some View {
         WithViewStore(self.store, observe: {$0} ) { viewStore in
             Form {
-                
+                Button {
+                    viewStore.send(.funck)
+                } label: {
+                    Text("FUCK")
+                }
+
             }
             .navigationBarTitle(Text(viewStore.contact.name))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        viewStore.send(.backButtonTapped)
+                    }, label: {
+                        Image(systemName: "trash")
+                    })
+                }
+            }
+        
         }
     }
     

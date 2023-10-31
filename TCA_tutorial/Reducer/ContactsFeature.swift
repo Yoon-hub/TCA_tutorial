@@ -15,6 +15,8 @@ struct Contact: Equatable, Identifiable {
 
 struct ContactsFeature: Reducer {
     
+    @Dependency(\.randomNumber) var number
+    
     struct State: Equatable {
 //        @PresentationState var addContact: AddContactFeature.State? // 부모와 자식 간의 상태 공유
 //        @PresentationState var alert: AlertState<Action.Alert>? // chater3 수정
@@ -41,9 +43,9 @@ struct ContactsFeature: Reducer {
     
     var body: some ReducerOf<Self> {
         
-        Scope(state: \.addContact, action: /Action.addContact) {
-            AddContactFeature()
-        }
+//        Scope(state: \.addContact, action: /Action.addContact) {
+//            AddContactFeature()
+//        }
         
         Reduce { state, action in
             switch action {

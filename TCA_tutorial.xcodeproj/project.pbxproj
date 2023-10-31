@@ -19,6 +19,7 @@
 		6769C3EB2AEDDE0200D3CA09 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */; };
 		6769C3ED2AEE713000D3CA09 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */; };
 		6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */; };
+		F430EDB22AF07E0D00B63C51 /* NumbersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430EDB12AF07E0D00B63C51 /* NumbersAPIClient.swift */; };
 		F4DB07DD2AEF20F50086F91C /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = F4DB07DC2AEF20F50086F91C /* TCACoordinators */; };
 		F4DB07DF2AEF21050086F91C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07DE2AEF21050086F91C /* Screen.swift */; };
 		F4DB07E12AEF24EA0086F91C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07E02AEF24EA0086F91C /* Coordinator.swift */; };
@@ -38,6 +39,7 @@
 		6769C3EA2AEDDE0200D3CA09 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		6769C3EC2AEE713000D3CA09 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
 		6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		F430EDB12AF07E0D00B63C51 /* NumbersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersAPIClient.swift; sourceTree = "<group>"; };
 		F4DB07DE2AEF21050086F91C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		F4DB07E02AEF24EA0086F91C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F4DB07E22AEF43C60086F91C /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		673FAD212AED13BA004AB046 /* TCA_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F430EDB02AF07DE600B63C51 /* Service */,
 				F4DB07DA2AEF20D00086F91C /* Coordinator */,
 				6769C3E42AEDD80E00D3CA09 /* View */,
 				6769C3E12AEDD6C900D3CA09 /* Reducer */,
@@ -113,6 +116,14 @@
 				6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F430EDB02AF07DE600B63C51 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F430EDB12AF07E0D00B63C51 /* NumbersAPIClient.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		F4DB07DA2AEF20D00086F91C /* Coordinator */ = {
@@ -203,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F430EDB22AF07E0D00B63C51 /* NumbersAPIClient.swift in Sources */,
 				6769C3ED2AEE713000D3CA09 /* ContactDetailFeature.swift in Sources */,
 				6769C3E32AEDD6DB00D3CA09 /* ContactsFeature.swift in Sources */,
 				6769C3E92AEDDDD300D3CA09 /* AddContactFeature.swift in Sources */,

@@ -14,7 +14,11 @@ struct Coordinator: Reducer {
     struct State: Equatable, IndexedRouterState {
         
         static let initialState = State (
-            routes: [.root(.contacts(.init()))]
+            routes: [.root(.contacts(.init(
+                contacts: [
+                    Contact(name: "뭐요")
+                ]
+            )), embedInNavigationView: true)]
         )
         
         var routes: [Route<Screen.State>]
@@ -29,8 +33,11 @@ struct Coordinator: Reducer {
         Reduce<State, Action> { state, action in
             switch action {
             case .routeAction(_, action: .contacts(.detail(let contact))):
-                state.routes.presentSheet(.contactDetail(.init(contact: contact)))
-                return .none
+                state.routes.append(.push(.contactDetail(.init(contact: contact))))
+               // return .none
+            case .routeAction(_, action: .contactDetail(.backButtonTapped)):
+                state.routes.pop()
+               // return .none
             default:
                 break
             }

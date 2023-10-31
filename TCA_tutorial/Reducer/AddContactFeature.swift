@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import TCACoordinators
 
 struct AddContactFeature: Reducer {
   struct State: Equatable {
@@ -24,7 +25,9 @@ struct AddContactFeature: Reducer {
           case saveContact(Contact)
       }
   }
-    @Dependency(\.dismiss) var dismiss
+   
+    @Dependency(\.uuid) var uuid
+  @Dependency(\.dismiss) var dismiss
   func reduce(into state: inout State, action: Action) -> Effect<Action> {
     switch action {
     case .cancelButtonTapped:

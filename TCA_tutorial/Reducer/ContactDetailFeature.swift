@@ -10,19 +10,23 @@ import ComposableArchitecture
 struct ContactDetailFeature: Reducer {
     
     struct State: Equatable {
-        let contact: Contact
+        var contact: Contact
     }
     
     enum Action: Equatable {
-        
+        case backButtonTapped
+        case funck
     }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-                
+            case .backButtonTapped:
+                return .none
+            case .funck:
+                print("ㅗㅗㅗ")
+                return .none
             }
-            
         }
     }
     
