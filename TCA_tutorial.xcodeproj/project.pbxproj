@@ -21,6 +21,7 @@
 		6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6769C3EE2AEE720100D3CA09 /* ContactDetailView.swift */; };
 		F430EDB22AF07E0D00B63C51 /* NumbersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430EDB12AF07E0D00B63C51 /* NumbersAPIClient.swift */; };
 		F4ABD1CE2B180E76000AFC2B /* TCA_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABD1CD2B180E76000AFC2B /* TCA_tutorialTests.swift */; };
+		F4ABD1D62B186CF0000AFC2B /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABD1D52B186CF0000AFC2B /* NumberFactClient.swift */; };
 		F4DB07DD2AEF20F50086F91C /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = F4DB07DC2AEF20F50086F91C /* TCACoordinators */; };
 		F4DB07DF2AEF21050086F91C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07DE2AEF21050086F91C /* Screen.swift */; };
 		F4DB07E12AEF24EA0086F91C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB07E02AEF24EA0086F91C /* Coordinator.swift */; };
@@ -53,6 +54,8 @@
 		F430EDB12AF07E0D00B63C51 /* NumbersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersAPIClient.swift; sourceTree = "<group>"; };
 		F4ABD1CB2B180E76000AFC2B /* TCA_tutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_tutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ABD1CD2B180E76000AFC2B /* TCA_tutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_tutorialTests.swift; sourceTree = "<group>"; };
+		F4ABD1D42B18641C000AFC2B /* TCA-tutorial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-tutorial-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F4ABD1D52B186CF0000AFC2B /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
 		F4DB07DE2AEF21050086F91C /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		F4DB07E02AEF24EA0086F91C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F4DB07E22AEF43C60086F91C /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		673FAD212AED13BA004AB046 /* TCA_tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				F4ABD1D42B18641C000AFC2B /* TCA-tutorial-Info.plist */,
 				F430EDB02AF07DE600B63C51 /* Service */,
 				F4DB07DA2AEF20D00086F91C /* Coordinator */,
 				6769C3E42AEDD80E00D3CA09 /* View */,
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F430EDB12AF07E0D00B63C51 /* NumbersAPIClient.swift */,
+				F4ABD1D52B186CF0000AFC2B /* NumberFactClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				6769C3EF2AEE720100D3CA09 /* ContactDetailView.swift in Sources */,
 				6769C3EB2AEDDE0200D3CA09 /* AddContactView.swift in Sources */,
 				673FAD232AED13BA004AB046 /* TCA_tutorialApp.swift in Sources */,
+				F4ABD1D62B186CF0000AFC2B /* NumberFactClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,7 @@
 				DEVELOPMENT_TEAM = XXJ2YB9QP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-tutorial-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,6 +470,7 @@
 				DEVELOPMENT_TEAM = XXJ2YB9QP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-tutorial-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

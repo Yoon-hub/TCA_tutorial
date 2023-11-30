@@ -25,9 +25,12 @@ struct CounterFeature: Reducer {
         case factResponse(String)
         case toggleTimerButtonTapped
         case timerTicked
+        
     }
     
     enum CancelID {case timer}
+    
+    @Dependency(\.numberFact) var numberFact
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
@@ -42,12 +45,13 @@ struct CounterFeature: Reducer {
         case .factButtonTapped:
             state.fact = nil
             state.isLoading = true
-            
             return .run { [count = state.count] send in
-              let (data, _) = try await URLSession.shared
-                .data(from: URL(string: "http://numbersapi.com/\(count)")!)
-              let fact = String(decoding: data, as: UTF8.self)
-              await send(.factResponse(fact))
+//              let (data, _) = try await URLSession.shared
+//                .data(from: URL(string: "http://numbersapi.com/\(count)")!)
+//              let fact = String(decoding: data, as: UTF8.self)
+//              await send(.factResponse(fact))
+                
+                try await send(.factResponse(self.numberFact.fetch(count)))
             }
         case let .factResponse(fact):
             state.fact = fact
@@ -55,11 +59,10 @@ struct CounterFeature: Reducer {
             return .none
         case .toggleTimerButtonTapped:
             state.isTimerRunning.toggle()
-            
             if state.isTimerRunning {
                 return .run { send in
                     while true {
-                        try await Task.sleep(for: .seconds(0.4))
+                        try await Task.sleep(for: .seconds(1))
                         await send(.timerTicked)
                     }
                 }
@@ -67,7 +70,6 @@ struct CounterFeature: Reducer {
             } else {
                 return .cancel(id: CancelID.timer)
             }
-            
   
         case .timerTicked:
             state.count += 1

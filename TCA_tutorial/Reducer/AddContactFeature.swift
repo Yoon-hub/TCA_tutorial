@@ -27,7 +27,7 @@ struct AddContactFeature: Reducer {
   }
    
     @Dependency(\.uuid) var uuid
-  @Dependency(\.dismiss) var dismiss
+    @Dependency(\.dismiss) var dismiss
   func reduce(into state: inout State, action: Action) -> Effect<Action> {
     switch action {
     case .cancelButtonTapped:
