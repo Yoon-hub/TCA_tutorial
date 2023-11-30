@@ -14,7 +14,7 @@ struct CounterView: View {
     
     var body: some View {
         
-        WithViewStore(self.store) {$0 } content: { viewStore in
+        WithViewStore(self.store) { $0 } content: { viewStore in
             VStack {
                 Text("\(viewStore.count)")
                 .font(.largeTitle)

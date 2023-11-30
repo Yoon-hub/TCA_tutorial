@@ -23,11 +23,15 @@ struct TCA_tutorialApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CoordinatorView (
-                store: Store(initialState: .initialState, reducer: {
-                    Coordinator()
-                })
-            )
+//                CoordinatorView (
+//                    store: Store(initialState: .initialState, reducer: {
+//                        Coordinator()
+//                    })
+//                )
+            CounterView(store: Store(initialState: CounterFeature.State(), reducer: {
+                CounterFeature()
+            }))
+            
         }
     }
 }
