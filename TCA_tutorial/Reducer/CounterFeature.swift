@@ -10,7 +10,8 @@ import ComposableArchitecture
 
 struct CounterFeature: Reducer {
     
-    struct State: Equatable { // UI를 렌더링하는데 필요한 데이터를 관리한다.
+    struct State: Equatable {
+        // UI를 렌더링하는데 필요한 데이터를 관리한다.
         var count = 0
         var fact: String?
         var isLoading = false
@@ -20,11 +21,13 @@ struct CounterFeature: Reducer {
     enum Action { // 사용자의 이벤트를 정의하는 곳
         case decrementButtonTapped
         case incrementButtonTapped
-        case fatchButtonTapped
+        case factButtonTapped
         case factResponse(String)
         case toggleTimerButtonTapped
         case timerTicked
     }
+    
+    enum CancelID {case timer}
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
@@ -36,7 +39,7 @@ struct CounterFeature: Reducer {
             state.fact = nil
             state.count += 1
             return .none
-        case .fatchButtonTapped:
+        case .factButtonTapped:
             state.fact = nil
             state.isLoading = true
             
@@ -52,12 +55,20 @@ struct CounterFeature: Reducer {
             return .none
         case .toggleTimerButtonTapped:
             state.isTimerRunning.toggle()
-            return .run { send in
-                while true {
-                    try await Task.sleep(for: .seconds(1))
-                    await send(.timerTicked)
+            
+            if state.isTimerRunning {
+                return .run { send in
+                    while true {
+                        try await Task.sleep(for: .seconds(0.4))
+                        await send(.timerTicked)
+                    }
                 }
+                .cancellable(id: CancelID.timer)
+            } else {
+                return .cancel(id: CancelID.timer)
             }
+            
+  
         case .timerTicked:
             state.count += 1
             state.fact = nil

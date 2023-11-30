@@ -49,7 +49,7 @@ struct CounterView: View {
 
                 
                 Button("Fact") {
-                    viewStore.send(.fatchButtonTapped)
+                    viewStore.send(.factButtonTapped)
                 }
                 .font(.largeTitle)
                 .padding()
