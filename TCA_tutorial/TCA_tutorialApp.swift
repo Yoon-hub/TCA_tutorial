@@ -31,7 +31,7 @@ struct TCA_tutorialApp: App {
             CounterView(store: Store(initialState: CounterFeature.State(), reducer: {
                 CounterFeature()
             }))
-            
+
         }
     }
 }

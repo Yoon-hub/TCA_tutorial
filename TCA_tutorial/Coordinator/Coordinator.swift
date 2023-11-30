@@ -14,6 +14,7 @@ struct Coordinator: Reducer {
     struct State: Equatable, IndexedRouterState {
         
         static let initialState = State (
+
             routes: [.root(.contacts(.init(contacts: [
                 Contact(name: "밥"),
                 Contact(name: "김치볶음밥"),
